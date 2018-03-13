@@ -4,7 +4,7 @@ import string
 
 # Define variables
 key = np.matrix([[11, 3], [4, 5]])
-message = 'XQYVVPXPTC'
+message = 'XQYVVPXPCR'
 
 # Generate the alphabet
 alphabet = string.ascii_uppercase

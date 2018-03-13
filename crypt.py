@@ -1,5 +1,6 @@
 import numpy as np
 import string
+import random
 
 # Define variables
 key = np.matrix([[11, 3], [4, 5]])
@@ -18,7 +19,7 @@ for index, i in enumerate(message):
         if index + 1 < len(message):
             secondValue = alphabet.index(message[index + 1])
         else:
-            secondValue = 6
+            secondValue = random.randint(0,25) 
         vector = np.matrix([[firstValue], [secondValue]])
         vector = key * vector
         vector %= 26
