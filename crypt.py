@@ -1,3 +1,8 @@
+# Python Script for Hill.
+# EFREI Promo 2019,
+# BOUQUET Julien <julien.bouquet@efrei.net>
+# MARTIN Alexandre <alexandre.martin@efrei.net>
+
 import numpy as np
 import string
 import random
@@ -19,7 +24,7 @@ for index, i in enumerate(message):
         if index + 1 < len(message):
             secondValue = alphabet.index(message[index + 1])
         else:
-            secondValue = random.randint(0,25) 
+            secondValue = random.randint(0,25)
         vector = np.matrix([[firstValue], [secondValue]])
         vector = key * vector
         vector %= 26

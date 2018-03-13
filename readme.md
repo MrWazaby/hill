@@ -21,3 +21,9 @@ pip install sympy
 Change variable section in code.  
 run `python crypt.py` to crypt the message.
 run `python decrypt.py` to decrypt the message.
+
+## Authors
+
+BOUQUET Julien <julien.bouquet@efrei.net>
+MARTIN Alexandre <alexandre.martin@efrei.net>
+EFREI Promo 2019.

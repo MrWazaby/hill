@@ -1,3 +1,8 @@
+# Python Script for Hill.
+# EFREI Promo 2019,
+# BOUQUET Julien <julien.bouquet@efrei.net>
+# MARTIN Alexandre <alexandre.martin@efrei.net>
+
 import numpy as np
 from sympy import Matrix
 import string
