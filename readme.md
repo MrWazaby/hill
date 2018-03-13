@@ -14,6 +14,7 @@ You may need to use pip:
 pip install numpy
 pip install sympy
 ```
+(Used for matrix calculation)
 
 ## How to use ?
 
