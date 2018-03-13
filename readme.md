@@ -24,6 +24,6 @@ run `python decrypt.py` to decrypt the message.
 
 ## Authors
 
-BOUQUET Julien <julien.bouquet@efrei.net>
-MARTIN Alexandre <alexandre.martin@efrei.net>
+BOUQUET Julien <julien.bouquet@efrei.net>  
+MARTIN Alexandre <alexandre.martin@efrei.net>  
 EFREI Promo 2019.
