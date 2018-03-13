@@ -9,6 +9,12 @@ Python implementation of Hill for Efrei.
 - random
 - sympy
 
+You may need to use pip:
+```
+pip install numpy
+pip install sympy
+```
+
 ## How to use ?
 
 Change variable section in code.  
