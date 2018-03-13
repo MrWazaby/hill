@@ -8,8 +8,8 @@ import string
 import random
 
 # Define variables
-dimension = 2
-key = np.matrix([[11, 3], [4, 5]])
+dimension = 3
+key = np.matrix([[6, 24, 1], [13, 16, 10], [20, 17, 15]])
 message = 'HILLCRYPT'
 
 # Generate the alphabet
@@ -22,16 +22,16 @@ encryptedMessage = ""
 for index, i in enumerate(message):
     values = []
     if index % dimension == 0:
-        values.append([alphabet.index(i)])
-        if index + 1 < len(message):
-            values.append([alphabet.index(message[index + 1])])
-        else:
-            values.append([random.randint(0,25)])
+        for j in range(0, dimension):
+            if(index + j < len(message)):
+                values.append([alphabet.index(message[index + j])])
+            else:
+                values.append([random.randint(0,25)])
         vector = np.matrix(values)
         vector = key * vector
         vector %= 26
-        for i in (0, dimension - 1):
-            encryptedMessage += alphabet[vector.item(i)]
+        for j in range(0, dimension):
+            encryptedMessage += alphabet[vector.item(j)]
 
 # Show the result
 print(encryptedMessage)

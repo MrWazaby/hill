@@ -8,9 +8,9 @@ from sympy import Matrix
 import string
 
 # Define variables
-dimension = 2
-key = np.matrix([[11, 3], [4, 5]])
-message = 'XQYVVPXPCR'
+dimension = 3
+key = np.matrix([[6, 24, 1], [13, 16, 10], [20, 17, 15]])
+message = 'LRZBHPDOG'
 
 # Generate the alphabet
 alphabet = string.ascii_uppercase
@@ -27,13 +27,14 @@ key = key.tolist()
 for index, i in enumerate(message):
     values = []
     if index % dimension == 0:
-        values.append([alphabet.index(i)])
-        values.append([alphabet.index(message[index + 1])])
+        for j in range(0, dimension):
+            values.append([alphabet.index(message[index + j])])
         vector = np.matrix(values)
         vector = key * vector
         vector %= 26
-        for i in (0, dimension - 1):
-            decryptedMessage += alphabet[vector.item(i)]
+        for j in range(0, dimension):
+            decryptedMessage += alphabet[vector.item(j)]
+
 
 # Show the result
 print(decryptedMessage)
